@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Flex, Box, Heading, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { Trending } from './components/Trending'
+import { Saved } from './components/Saved'
+import { TabContainer } from 'components/General/TabContainer'
 
-function App() {
+export const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Flex height='100vh' alignItems='center' justifyContent='center' direction='column'>
+      <Heading mb={6}>Popular Repositories</Heading>
+      <Text mb={10}>View trending repositories on Github and keep up to date with the best projects!</Text>
 
-export default App;
+      <Box width={600}>
+        <Tabs>
+          <TabList>
+            <Tab>Trending</Tab>
+            <Tab>Saved</Tab>
+            <Tab>About</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <TabContainer>
+                <Trending />
+              </TabContainer>
+            </TabPanel>
+            <TabPanel>
+              <TabContainer>
+                <Saved />
+              </TabContainer>
+            </TabPanel>
+            <TabPanel>
+              <TabContainer>
+                <p>about</p>
+              </TabContainer>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Box>
+    </Flex>
+  )
+}
