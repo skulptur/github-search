@@ -18,7 +18,6 @@ export const useSaveRepositories = () => {
     const index = findIndex(repository.id)
     const isSaved = isValidIndex(index)
     const repositories = isSaved ? removeItem(savedRepositories, index) : [repository, ...savedRepositories]
-    console.log(index, isSaved, repositories)
 
     setSavedRepositories(repositories)
   }
