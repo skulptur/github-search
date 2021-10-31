@@ -1,6 +1,7 @@
 import { Flex, Box, Heading, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { Trending } from './components/Trending'
 import { Saved } from './components/Saved'
+import { About } from 'components/About'
 import { TabContainer } from 'components/General/TabContainer'
 
 export const App = (): JSX.Element => {
@@ -29,7 +30,7 @@ export const App = (): JSX.Element => {
             </TabPanel>
             <TabPanel>
               <TabContainer>
-                <p>about</p>
+                <About />
               </TabContainer>
             </TabPanel>
           </TabPanels>
