@@ -1,5 +1,3 @@
-import { trendingRepositoriesMock } from './trendingRepositoriesMock'
-
 export type RepositoryResponseData = {
   total_count: number
   incomplete_results: boolean
@@ -14,7 +12,7 @@ export type Repository = {
   private: boolean
   owner: Owner
   html_url: string
-  description: string
+  description: string | null
   fork: boolean
   url: string
   forks_url: string
@@ -114,12 +112,4 @@ export type License = {
   spdx_id: string
   url: string
   node_id: string
-}
-
-export const getTrendingRepositories = () => {
-  return new Promise<RepositoryResponseData>((resolve, reject) => {
-    setTimeout(() => {
-      resolve(trendingRepositoriesMock)
-    }, 100)
-  })
 }

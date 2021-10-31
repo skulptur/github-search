@@ -1,5 +1,5 @@
 import { useLocalStorage } from 'usehooks-ts'
-import type { Repository } from './getTrendingRepositories'
+import type { Repository } from './github.types'
 import { removeItem } from '../utils/removeItem'
 import { isValidIndex } from '../utils/isValidIndex'
 

@@ -1,7 +1,7 @@
 import { Flex, Box, Spacer, Badge, Image, IconButton, Icon, Text, Link } from '@chakra-ui/react'
 import { GoBookmark, GoClock, GoSync, GoLaw } from 'react-icons/go'
 import { FiStar } from 'react-icons/fi'
-import type { Repository } from 'services/getTrendingRepositories'
+import type { Repository } from 'services/github.types'
 import { truncate } from '../utils/truncate'
 import { formatDistanceToNowStrict, format } from 'date-fns'
 import { TextWithIcon } from './General/TextWithIcon'
@@ -31,7 +31,7 @@ export const RepositoryItem = ({ repository, isSaved, onToggleSave }: Repository
       <Flex marginBottom={3}>
         <Image src={repository.owner.avatar_url} rounded={3} width={38} height={38} />
         <Text paddingLeft={5} fontSize='small' wordBreak='break-word'>
-          {truncate(repository.description, 130)}
+          {truncate(repository.description || '', 130)}
         </Text>
       </Flex>
 
