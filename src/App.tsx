@@ -8,9 +8,7 @@ export const App = (): JSX.Element => {
   return (
     <Flex height='100vh' alignItems='center' justifyContent='center' direction='column'>
       <Heading marginBottom={6}>Popular Repositories</Heading>
-      <Text marginBottom={10}>
-        View last week's trending repositories on Github and keep up-to-date with the best projects!
-      </Text>
+      <Text marginBottom={10}>View trending repositories on Github and keep up-to-date with the best projects!</Text>
 
       <Box width={600}>
         <Tabs>
