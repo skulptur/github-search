@@ -8,7 +8,7 @@ import { breakpoints } from './breakpoints'
 export const App = (): JSX.Element => {
   return (
     <Tabs>
-      <Flex height='100vh' paddingLeft={5} paddingRight={5} alignItems='center' direction='column'>
+      <Flex height='100vh' alignItems='center' direction='column'>
         <Flex as='header' alignItems='center' direction='column'>
           <Heading marginTop={50} marginBottom={6}>
             Popular Repositories
@@ -24,25 +24,36 @@ export const App = (): JSX.Element => {
           </TabList>
         </Flex>
 
-        <Box as='section' flexGrow={1} overflow='auto' maxWidth={{ md: breakpoints.md }} width={{ sm: '100%' }}>
-          <TabPanels>
-            <TabPanel>
-              <TabContainer>
-                <Trending />
-              </TabContainer>
-            </TabPanel>
-            <TabPanel>
-              <TabContainer>
-                <Saved />
-              </TabContainer>
-            </TabPanel>
-            <TabPanel>
-              <TabContainer>
-                <About />
-              </TabContainer>
-            </TabPanel>
-          </TabPanels>
-        </Box>
+        <Flex
+          as='section'
+          justifyContent='center'
+          flexGrow={1}
+          overflow='auto'
+          paddingLeft={5}
+          paddingRight={5}
+          background='gray.200'
+          width='100%'
+        >
+          <Box maxWidth={{ md: breakpoints.md }} width={{ sm: '100%' }}>
+            <TabPanels>
+              <TabPanel>
+                <TabContainer>
+                  <Trending />
+                </TabContainer>
+              </TabPanel>
+              <TabPanel>
+                <TabContainer>
+                  <Saved />
+                </TabContainer>
+              </TabPanel>
+              <TabPanel>
+                <TabContainer>
+                  <About />
+                </TabContainer>
+              </TabPanel>
+            </TabPanels>
+          </Box>
+        </Flex>
       </Flex>
     </Tabs>
   )
