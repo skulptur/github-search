@@ -10,4 +10,4 @@ Install dependencides and run dev server:
 yarn && yarn start
 ```
 
-For more information, read [Create React App](https://github.com/facebook/create-react-app).
+For more information, read [Create React App](https://github.com/facebook/create-react-app) docs.
