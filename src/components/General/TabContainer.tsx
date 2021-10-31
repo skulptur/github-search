@@ -6,7 +6,7 @@ export type TabContainerProps = {
 
 export const TabContainer = ({ children }: TabContainerProps): JSX.Element => {
   return (
-    <Flex direction='column' background='gray.100' padding={5} rounded={6} overflowY='scroll'>
+    <Flex direction='column' background='gray.100' padding={5} rounded={6}>
       {children}
     </Flex>
   )
