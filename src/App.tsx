@@ -3,6 +3,7 @@ import { Trending } from './components/Trending'
 import { Saved } from './components/Saved'
 import { About } from 'components/About'
 import { TabContainer } from 'components/General/TabContainer'
+import { breakpoints } from './breakpoints'
 
 export const App = (): JSX.Element => {
   return (
@@ -23,7 +24,7 @@ export const App = (): JSX.Element => {
           </TabList>
         </Flex>
 
-        <Box as='section' flexGrow={1} overflow='auto'>
+        <Box as='section' flexGrow={1} overflow='auto' maxWidth={{ md: breakpoints.md }} width={{ sm: '100%' }}>
           <TabPanels>
             <TabPanel>
               <TabContainer>
