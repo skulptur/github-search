@@ -4,10 +4,10 @@ View trending github repositories for the last week and stay up-to-date with the
 
 ## Get started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 Install dependencides and run dev server:
 
 ```bash
 yarn && yarn start
 ```
+
+For more information, read [Create React App](https://github.com/facebook/create-react-app).
