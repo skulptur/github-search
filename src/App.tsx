@@ -10,10 +10,10 @@ export const App = (): JSX.Element => {
     <Tabs>
       <Flex height='100vh' alignItems='center' direction='column'>
         <Flex as='header' alignItems='center' direction='column'>
-          <Heading marginTop={50} marginBottom={6}>
+          <Heading textAlign='center' marginTop={50} marginBottom={6}>
             Popular Repositories
           </Heading>
-          <Text marginBottom={10}>
+          <Text textAlign='center' paddingLeft={10} paddingRight={10} marginBottom={10}>
             View trending repositories on Github and keep up-to-date with the best projects!
           </Text>
 
@@ -24,16 +24,7 @@ export const App = (): JSX.Element => {
           </TabList>
         </Flex>
 
-        <Flex
-          as='section'
-          justifyContent='center'
-          flexGrow={1}
-          overflow='auto'
-          paddingLeft={5}
-          paddingRight={5}
-          background='gray.200'
-          width='100%'
-        >
+        <Flex as='section' justifyContent='center' flexGrow={1} overflow='auto' background='gray.50' width='100%'>
           <Box maxWidth={{ md: breakpoints.md }} width={{ sm: '100%' }}>
             <TabPanels>
               <TabPanel>
