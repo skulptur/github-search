@@ -16,7 +16,7 @@ export const RepositoryItem = ({ repository, isSaved, onToggleSave }: Repository
   return (
     <Flex direction='column' background='white' padding={3} rounded={5} marginBottom={5}>
       <Flex marginBottom={1}>
-        <Link href={repository.url} isExternal color='blue.500' fontWeight='500'>
+        <Link href={repository.html_url} isExternal color='blue.500' fontWeight='500'>
           {repository.name}
         </Link>
         <Spacer />
